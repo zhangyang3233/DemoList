@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends ListActivity {
-    public static final String CATEGORY = "com.android5.0.effect";
-    public static final String ACTIVITY_INFO = "com.android5.0.effect.info";
+    public static final String CATEGORY = "demo.item";
+    public static final String ACTIVITY_INFO = "demo.item.info";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

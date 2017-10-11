@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="touch_raise_to">2dp</dimen>
+    <dimen name="touch_raise">4dp</dimen>
+    <dimen name="common_button_radius">4dp</dimen>
+</resources>

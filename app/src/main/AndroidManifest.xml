@@ -17,13 +17,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".demo.CircularRevealActivity"
+            android:name=".demo.anim_circular.CircularRevealActivity"
             android:label="动画/揭示动画"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.android5.0.effect" />
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -33,7 +33,26 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.android5.0.effect" />
+                <category android:name="demo.item" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demo.dialog.SheetDialogActivity"
+            android:label="dialog/底部弹出dialog"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="demo.item" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".demo.button_bg.ButtonBackgroundActivity"
+            android:label="系统特效/按钮ripple背景"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
     </application>
