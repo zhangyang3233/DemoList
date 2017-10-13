@@ -38,7 +38,7 @@ public class MainActivity extends ListActivity {
     }
 
     protected List<Map<String, Object>> getData(String prefix) {
-        List<Map<String, Object>> myData = new ArrayList<Map<String, Object>>();
+        List<Map<String, Object>> myData = new ArrayList();
 
         Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
         mainIntent.addCategory(CATEGORY);
@@ -61,7 +61,7 @@ public class MainActivity extends ListActivity {
 
         int len = list.size();
 
-        Map<String, Boolean> entries = new HashMap<String, Boolean>();
+        Map<String, Boolean> entries = new HashMap();
 
         for (int i = 0; i < len; i++) {
             ResolveInfo info = list.get(i);

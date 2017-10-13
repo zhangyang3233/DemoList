@@ -3,8 +3,9 @@
     package="com.example.zhangyang05.demolist">
 
     <application
+        android:name=".base.BaseApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_demo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -27,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".demo.ppdprogress.PPDProgressActivity"
+            android:name=".demo.widget.ppdprogress.PPDProgressActivity"
             android:label="控件/拍拍贷定制进度条"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -46,8 +47,19 @@
                 <category android:name="demo.item" />
             </intent-filter>
         </activity>
-        <activity android:name=".demo.button_bg.ButtonBackgroundActivity"
+        <activity
+            android:name=".demo.button_bg.ButtonBackgroundActivity"
             android:label="系统特效/按钮ripple背景"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="demo.item" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demo.widget.scratch_out_view.ScratchOutActivity"
+            android:label="控件/刮刮卡效果"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

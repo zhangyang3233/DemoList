@@ -11,7 +11,7 @@
  * ==================================================================
  * 17-10-9 上午11:54     zhangyang05     1.0       1.0 Version
  */
-package com.example.zhangyang05.demolist.demo.ppdprogress;
+package com.example.zhangyang05.demolist.demo.widget.ppdprogress;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -327,6 +327,9 @@ public class PPDProgressView extends View {
     }
 
     private void drawText(Canvas canvas) {
+        if(!mShowProgressText){
+            return;
+        }
         measureTextX();
         //绘制顶端文字
         mTextPaint.setTextSize(mAboveTextSize);
