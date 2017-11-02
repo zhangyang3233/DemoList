@@ -6,4 +6,12 @@
 .DS_Store
 /build
 /captures
+gen/
+.settings/
 .externalNativeBuild
+.idea/
+*.apk
+*.properties
+gradle/
+.idea/*
+
