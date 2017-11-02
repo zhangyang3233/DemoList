@@ -19,7 +19,7 @@
         </activity>
         <activity
             android:name=".demo.anim_circular.CircularRevealActivity"
-            android:label="系统特效/揭示动画"
+            android:label="系统效果/揭示动画"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,7 +49,7 @@
         </activity>
         <activity
             android:name=".demo.button_bg.ButtonBackgroundActivity"
-            android:label="系统特效/按钮ripple背景"
+            android:label="系统效果/按钮ripple背景"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,6 +61,16 @@
             android:name=".demo.widget.scratch_out_view.ScratchOutActivity"
             android:label="控件/刮刮卡效果"
             android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="demo.item" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".demo.constraint_layout.ConstraintLayoutActivity"
+            android:label="系统效果/约束布局"
+            android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
