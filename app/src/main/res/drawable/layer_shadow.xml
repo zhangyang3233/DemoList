@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cardShadowColor_1"/>
+            <corners android:radius="@dimen/shadow_Radius"/>
+            <padding
+                android:bottom="@dimen/layer_padding"
+                android:left="@dimen/layer_padding"
+                android:right="@dimen/layer_padding"
+                android:top="@dimen/layer_padding"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cardShadowColor_2"/>
+            <corners android:radius="@dimen/shadow_Radius"/>
+            <padding
+                android:bottom="@dimen/layer_padding"
+                android:left="@dimen/layer_padding"
+                android:right="@dimen/layer_padding"
+                android:top="@dimen/layer_padding"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cardShadowColor_3"/>
+            <corners android:radius="@dimen/shadow_Radius"/>
+            <padding
+                android:bottom="@dimen/layer_padding"
+                android:left="@dimen/layer_padding"
+                android:right="@dimen/layer_padding"
+                android:top="@dimen/layer_padding"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cardShadowColor_4"/>
+            <corners android:radius="@dimen/shadow_Radius"/>
+            <padding
+                android:bottom="@dimen/layer_padding"
+                android:left="@dimen/layer_padding"
+                android:right="@dimen/layer_padding"
+                android:top="@dimen/layer_padding"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cardShadowColor_5"/>
+            <corners android:radius="@dimen/shadow_Radius"/>
+            <padding
+                android:bottom="@dimen/layer_padding"
+                android:left="@dimen/layer_padding"
+                android:right="@dimen/layer_padding"
+                android:top="@dimen/layer_padding"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cardShadowColor_6"/>
+            <corners android:radius="@dimen/shadow_Radius"/>
+            <padding
+                android:bottom="@dimen/layer_padding"
+                android:left="@dimen/layer_padding"
+                android:right="@dimen/layer_padding"
+                android:top="@dimen/layer_padding"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cardShadowColor_7"/>
+            <corners android:radius="@dimen/shadow_Radius"/>
+            <padding
+                android:bottom="@dimen/layer_padding"
+                android:left="@dimen/layer_padding"
+                android:right="@dimen/layer_padding"
+                android:top="@dimen/layer_padding"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cardShadowColor_8"/>
+            <corners android:radius="@dimen/shadow_Radius"/>
+            <padding
+                android:bottom="@dimen/layer_padding"
+                android:left="@dimen/layer_padding"
+                android:right="@dimen/layer_padding"
+                android:top="@dimen/layer_padding"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/card_Radius"/>
+            <solid android:color="@color/cardBodyColor"/>
+            <padding
+                android:bottom="@dimen/shadow_Radius"
+                android:left="@dimen/shadow_Radius"
+                android:right="@dimen/shadow_Radius"
+                android:top="@dimen/shadow_Radius"
+                />
+        </shape>
+    </item>
+</layer-list>

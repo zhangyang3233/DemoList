@@ -47,7 +47,7 @@
 
         <Button
             android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:background="@drawable/common_ripple_oval"
             android:text="自定义"
@@ -66,6 +66,14 @@
             android:layout_margin="15dp"
             android:text="点击"
             android:background="@drawable/ripple_img_mask"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="xml图层阴影"
+            android:background="@drawable/layer_shadow"
             android:textColor="@android:color/black" />
     </LinearLayout>
 

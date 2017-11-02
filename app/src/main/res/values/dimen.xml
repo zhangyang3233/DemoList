@@ -3,4 +3,10 @@
     <dimen name="touch_raise_to">2dp</dimen>
     <dimen name="touch_raise">4dp</dimen>
     <dimen name="common_button_radius">4dp</dimen>
+
+    <dimen name="shadow_Radius">25dp</dimen>
+    <dimen name="layer_padding">2px</dimen>
+    <dimen name="card_Radius">23dp</dimen>
+    <!--card radius 应该是shadowRadius减去layer_padding-->
+    <!--card = shadow - layer_padding-->
 </resources>

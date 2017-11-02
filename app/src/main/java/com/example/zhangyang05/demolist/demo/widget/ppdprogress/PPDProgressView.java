@@ -27,6 +27,7 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
@@ -117,7 +118,7 @@ public class PPDProgressView extends View {
         mProgressColor = ta.getColor(R.styleable.PPDProgressView_ppd_progressColor, getColorPrimary());
         mProgressHeight = ta.getDimensionPixelSize(R.styleable.PPDProgressView_ppd_progress_height,
                 dp2px(DEFAULT_PROGRESS_HEIGHT));
-        // 纠正方锯齿丢失的高度
+        // 纠正防锯齿丢失的高度
         mProgressHeight += 2;
         mBackProgressColor = ta.getColor(R.styleable.PPDProgressView_ppd_back_progressColor,
                 DEFAULT_BACK_GROUND_PROGRESS_COLOR);
@@ -320,14 +321,23 @@ public class PPDProgressView extends View {
             mThumbDrawable.setBounds(thumbLeft, thumbTop, thumbRight, thumbBottom);
             mThumbDrawable.draw(canvas);
         } else {
-            mThumbPaint.setColor(Color.GRAY);
-            mThumbPaint.setShadowLayer(10, 3, 3, Color.BLACK);
+            if (canvas.isHardwareAccelerated()) {
+                setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+            }
+            if (touched) {
+                mThumbPaint.setColor(0xffeeeeee);
+                mThumbPaint.setShadowLayer(4, 0, 1, 0xff000000);
+            } else {
+                mThumbPaint.setColor(Color.WHITE);
+                mThumbPaint.setShadowLayer(8, 0, 2, 0xff333333);
+            }
+            Log.e("event-draw", touched + "");
             canvas.drawCircle(thumbCenterX, thumbCenterY, thumbHeight / 2, mThumbPaint);
         }
     }
 
     private void drawText(Canvas canvas) {
-        if(!mShowProgressText){
+        if (!mShowProgressText) {
             return;
         }
         measureTextX();
@@ -336,7 +346,6 @@ public class PPDProgressView extends View {
         mTextPaint.setColor(mAboveTextColor);
         Rect rect = new Rect();
         mTextPaint.getTextBounds(MEASURE_TEXT, 0, MEASURE_TEXT.length(), rect);
-        float textBaseY = rect.height() - rect.bottom;
         float left1 = topTextLeft;
         if (left1 < getPaddingLeft()) {
             left1 = getPaddingLeft();
@@ -346,14 +355,14 @@ public class PPDProgressView extends View {
         if (mTopTextBold) {
             mTextPaint.setFakeBoldText(true);
         }
-        canvas.drawText(getTopText(), left1, getPaddingTop() + textBaseY, mTextPaint);
+        canvas.drawText(getTopText(), left1, topTextTop + topTextH, mTextPaint);
 
         //绘制左侧文字
         mTextPaint.setFakeBoldText(false);
         mTextPaint.setTextSize(mFollowTextSize);
         mTextPaint.setColor(mFollowTextColor);
         mTextPaint.getTextBounds(MEASURE_TEXT, 0, MEASURE_TEXT.length(), rect);
-        float textBaseY2 = rect.height() - rect.bottom;
+        float textBaseY2 = leftTextH;
         float y = getPaddingTop() + 2 * textMargin + mProgressHeight + topTextH + textBaseY2;
         canvas.drawText(getLeftText(), leftTextLeft, y, mTextPaint);
 
@@ -459,14 +468,17 @@ public class PPDProgressView extends View {
     }
 
     int dx, dy;
+    boolean touched;
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        Log.w("event", event.getAction() + "");
         if (mStyle == STYLE_PROGRESS) {
             return super.onTouchEvent(event);
         }
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                touched = true;
                 dx = (int) event.getX();
                 dy = (int) event.getY();
                 if (!isAvailableClick(dy)) {
@@ -475,9 +487,12 @@ public class PPDProgressView extends View {
                 updateProgressByTouch(dx);
                 break;
             case MotionEvent.ACTION_MOVE:
-            case MotionEvent.ACTION_UP:
-            case MotionEvent.ACTION_CANCEL:
                 updateProgressByTouch((int) event.getX());
+                break;
+            default:
+                touched = false;
+                updateProgressByTouch((int) event.getX());
+                invalidate();
                 break;
         }
 
@@ -498,7 +513,8 @@ public class PPDProgressView extends View {
     private boolean isAvailableClick(int cy) {
         int thumbCenterTop = (int) (getPaddingTop() + topTextH + textMargin);
         int thumbCenterBottom = (int) (getPaddingTop() + topTextH + textMargin + getThumbHeight());
-        return cy > thumbCenterTop && cy < thumbCenterBottom;
+//        return cy > thumbCenterTop && cy < thumbCenterBottom;
+        return true;
     }
 
     interface OnProgressChangeListener {

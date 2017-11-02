@@ -1,64 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="10dp">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:padding="10dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="带文字的progressbar↓" />
+        android:text="带文字的progressbar↓"/>
 
     <com.example.zhangyang05.demolist.demo.widget.ppdprogress.PPDProgressView
         android:id="@+id/progress_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         app:ppd_max="1000"
         app:ppd_progress="500"
-        app:ppd_progress_above_text_size="15sp"
+        app:ppd_progress_above_text_size="18sp"
         app:ppd_progress_height="6dp"
         app:ppd_show_text="true"
         app:ppd_strokeWidth="1px"
-        app:ppd_text_margin="5dp" />
+        app:ppd_text_margin="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="带文字的seekbar↓" />
+        android:text="带文字的seekbar↓"/>
 
     <com.example.zhangyang05.demolist.demo.widget.ppdprogress.PPDProgressView
         android:id="@+id/progress_bar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:padding="10dp"
         app:ppd_max="1000"
         app:ppd_progress="500"
-        app:ppd_progress_above_text_size="15sp"
+        app:ppd_progress_above_text_size="18sp"
         app:ppd_progress_height="6dp"
         app:ppd_progress_style="seek_bar"
         app:ppd_show_text="true"
         app:ppd_strokeWidth="0px"
-        app:ppd_text_margin="5dp" />
+        app:ppd_text_margin="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="不带文字progressbar样式1↓" />
+        android:text="不带文字progressbar样式1↓"/>
 
     <com.example.zhangyang05.demolist.demo.widget.ppdprogress.PPDProgressView
         android:id="@+id/progress_bar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         app:ppd_max="1000"
         app:ppd_progress="500"
         app:ppd_progressColor="@color/colorPrimary"
@@ -66,13 +62,13 @@
         app:ppd_progress_style="progress"
         app:ppd_show_text="false"
         app:ppd_strokeColor="@color/colorPrimary"
-        app:ppd_strokeWidth="1px" />
+        app:ppd_strokeWidth="1px"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="不带文字progressbar样式2↓" />
+        android:text="不带文字progressbar样式2↓"/>
 
 
     <com.example.zhangyang05.demolist.demo.widget.ppdprogress.PPDProgressView
@@ -87,12 +83,12 @@
         app:ppd_progress_style="progress"
         app:ppd_show_text="false"
         app:ppd_strokeColor="@color/colorPrimary"
-        app:ppd_strokeWidth="0px" />
+        app:ppd_strokeWidth="0px"/>
 
     <SeekBar
         android:id="@+id/seek_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"/>
 </LinearLayout>
 

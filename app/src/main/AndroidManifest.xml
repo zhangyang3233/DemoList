@@ -5,7 +5,7 @@
     <application
         android:name=".base.BaseApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_demo"
+        android:icon="@drawable/aaaa"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -19,7 +19,7 @@
         </activity>
         <activity
             android:name=".demo.anim_circular.CircularRevealActivity"
-            android:label="动画/揭示动画"
+            android:label="系统特效/揭示动画"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
