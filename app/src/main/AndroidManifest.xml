@@ -67,10 +67,30 @@
                 <category android:name="demo.item" />
             </intent-filter>
         </activity>
-        <activity android:name=".demo.constraint_layout.ConstraintLayoutActivity"
+        <activity
+            android:name=".demo.constraint_layout.ConstraintLayoutActivity"
             android:label="系统效果/约束布局"
             android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="demo.item" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demo.nested_scrolling.NestedScrollingTestActivity"
+            android:label="系统效果/NestedScrolling"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="demo.item" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demo.widget.loopViewPger.LooperActivity"
+            android:label="控件/looperViewpager"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
