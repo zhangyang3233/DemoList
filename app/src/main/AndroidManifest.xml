@@ -29,7 +29,7 @@
         </activity>
         <activity
             android:name=".demo.widget.ppdprogress.PPDProgressActivity"
-            android:label="控件/拍拍贷定制进度条"
+            android:label="控件/定制进度条"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
