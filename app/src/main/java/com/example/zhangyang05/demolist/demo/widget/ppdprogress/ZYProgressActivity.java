@@ -7,9 +7,9 @@ import android.widget.TextView;
 import com.example.zhangyang05.demolist.R;
 import com.example.zhangyang05.demolist.base.BaseActivityCompat;
 
-public class PPDProgressActivity extends BaseActivityCompat implements PPDProgressView
+public class ZYProgressActivity extends BaseActivityCompat implements ZYProgressView
         .TextRulerFormatter, SeekBar.OnSeekBarChangeListener {
-    PPDProgressView p, p2, p3, p4;
+    ZYProgressView p, p2, p3, p4;
     SeekBar s;
     TextView text;
 

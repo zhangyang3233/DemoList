@@ -34,7 +34,7 @@ import android.view.View;
 
 import com.example.zhangyang05.demolist.R;
 
-public class PPDProgressView extends View {
+public class ZYProgressView extends View {
     private static final int DEFAULT_BACK_GROUND_PROGRESS_COLOR = 0xffe5e5e5;
     private static final int DEFAULT_PROGRESS_HEIGHT = 6;
     private static final int DEFAULT_TOUCHED_THUMB_COLOR = 0xfff0f0f0;
@@ -72,7 +72,7 @@ public class PPDProgressView extends View {
     float leftTextH, leftTextW, leftTextLeft, leftTextTop;
     float rightTextH, rightTextW, rightTextLeft, rightTextTop;
 
-    public PPDProgressView(Context context, @Nullable AttributeSet attrs) {
+    public ZYProgressView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initAttrs(context, attrs);
         initPaint();
@@ -120,34 +120,34 @@ public class PPDProgressView extends View {
     }
 
     private void initAttrs(Context context, AttributeSet attrs) {
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.PPDProgressView);
-        mThumbDrawable = ta.getDrawable(R.styleable.PPDProgressView_ppd_thumb);
-        mProgressColor = ta.getColor(R.styleable.PPDProgressView_ppd_progressColor, getColorPrimary());
-        mProgressHeight = ta.getDimensionPixelSize(R.styleable.PPDProgressView_ppd_progress_height,
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ZYProgressView);
+        mThumbDrawable = ta.getDrawable(R.styleable.ZYProgressView_ppd_thumb);
+        mProgressColor = ta.getColor(R.styleable.ZYProgressView_ppd_progressColor, getColorPrimary());
+        mProgressHeight = ta.getDimensionPixelSize(R.styleable.ZYProgressView_ppd_progress_height,
                 dp2px(DEFAULT_PROGRESS_HEIGHT));
         // 纠正防锯齿丢失的高度
         mProgressHeight += 2;
-        mBackProgressColor = ta.getColor(R.styleable.PPDProgressView_ppd_back_progressColor,
+        mBackProgressColor = ta.getColor(R.styleable.ZYProgressView_ppd_back_progressColor,
                 DEFAULT_BACK_GROUND_PROGRESS_COLOR);
-        mProgress = ta.getColor(R.styleable.PPDProgressView_ppd_progress, 0);
+        mProgress = ta.getColor(R.styleable.ZYProgressView_ppd_progress, 0);
         mDrawProgress = mProgress;
-        mMax = ta.getColor(R.styleable.PPDProgressView_ppd_max, DEFAULT_MAX);
-        mStrokeColor = ta.getColor(R.styleable.PPDProgressView_ppd_strokeColor, getDarkColorPrimary());
-        mStrokeWidth = ta.getDimensionPixelSize(R.styleable.PPDProgressView_ppd_strokeWidth, 0);
-        mTextMargin = ta.getDimensionPixelSize(R.styleable.PPDProgressView_ppd_text_margin,
+        mMax = ta.getColor(R.styleable.ZYProgressView_ppd_max, DEFAULT_MAX);
+        mStrokeColor = ta.getColor(R.styleable.ZYProgressView_ppd_strokeColor, getDarkColorPrimary());
+        mStrokeWidth = ta.getDimensionPixelSize(R.styleable.ZYProgressView_ppd_strokeWidth, 0);
+        mTextMargin = ta.getDimensionPixelSize(R.styleable.ZYProgressView_ppd_text_margin,
                 dp2px(DEFAULT_TEXT_MARGIN));
-        mStyle = ta.getInt(R.styleable.PPDProgressView_ppd_progress_style, STYLE_PROGRESS);
+        mStyle = ta.getInt(R.styleable.ZYProgressView_ppd_progress_style, STYLE_PROGRESS);
         // 上面的文字
-        mAboveTextColor = ta.getColor(R.styleable.PPDProgressView_ppd_progress_above_text_color, Color.BLACK);
-        mAboveTextSize = ta.getDimensionPixelSize(R.styleable.PPDProgressView_ppd_progress_above_text_size,
+        mAboveTextColor = ta.getColor(R.styleable.ZYProgressView_ppd_progress_above_text_color, Color.BLACK);
+        mAboveTextSize = ta.getDimensionPixelSize(R.styleable.ZYProgressView_ppd_progress_above_text_size,
                 sp2px(DEFAULT_UP_PROGRESS_TEXT));
-        mShowProgressText = ta.getBoolean(R.styleable.PPDProgressView_ppd_show_text, false);
-        mTopTextBold = ta.getBoolean(R.styleable.PPDProgressView_ppd_top_text_bold, true);
+        mShowProgressText = ta.getBoolean(R.styleable.ZYProgressView_ppd_show_text, false);
+        mTopTextBold = ta.getBoolean(R.styleable.ZYProgressView_ppd_top_text_bold, true);
         // 下面的文字
-        mFollowTextColor = ta.getColor(R.styleable.PPDProgressView_ppd_progress_following_text_color,
+        mFollowTextColor = ta.getColor(R.styleable.ZYProgressView_ppd_progress_following_text_color,
                 Color.BLACK);
         mFollowTextSize = ta.getDimensionPixelSize(
-                R.styleable.PPDProgressView_ppd_progress_following_text_size,
+                R.styleable.ZYProgressView_ppd_progress_following_text_size,
                 sp2px(DEFAULT_DOWN_PROGRESS_TEXT));
         ta.recycle();
     }

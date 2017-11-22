@@ -14,7 +14,7 @@
         android:layout_marginTop="20dp"
         android:text="带文字的progressbar↓"/>
 
-    <com.example.zhangyang05.demolist.demo.widget.ppdprogress.PPDProgressView
+    <com.example.zhangyang05.demolist.demo.widget.ppdprogress.ZYProgressView
         android:id="@+id/progress_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         android:layout_marginTop="50dp"
         android:text="带文字的seekbar↓"/>
 
-    <com.example.zhangyang05.demolist.demo.widget.ppdprogress.PPDProgressView
+    <com.example.zhangyang05.demolist.demo.widget.ppdprogress.ZYProgressView
         android:id="@+id/progress_bar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         android:layout_marginTop="50dp"
         android:text="不带文字progressbar样式1↓"/>
 
-    <com.example.zhangyang05.demolist.demo.widget.ppdprogress.PPDProgressView
+    <com.example.zhangyang05.demolist.demo.widget.ppdprogress.ZYProgressView
         android:id="@+id/progress_bar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
         android:text="不带文字progressbar样式2↓"/>
 
 
-    <com.example.zhangyang05.demolist.demo.widget.ppdprogress.PPDProgressView
+    <com.example.zhangyang05.demolist.demo.widget.ppdprogress.ZYProgressView
         android:id="@+id/progress_bar4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

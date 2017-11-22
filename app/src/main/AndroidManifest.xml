@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".demo.widget.ppdprogress.PPDProgressActivity"
+            android:name=".demo.widget.ppdprogress.ZYProgressActivity"
             android:label="控件/定制进度条"
             android:theme="@style/AppTheme">
             <intent-filter>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="PPDProgressView">
+    <declare-styleable name="ZYProgressView">
         <attr name="ppd_progressColor" format="color" />
         <attr name="ppd_back_progressColor" format="color" />
         <attr name="ppd_max" format="integer" />
