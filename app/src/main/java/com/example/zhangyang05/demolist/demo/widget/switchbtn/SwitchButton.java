@@ -43,7 +43,6 @@ public class SwitchButton extends CompoundButton implements ValueAnimator.Animat
 
   // 初始化值
   private float mSwitchValue = DEFAULT_IS_CHECKED ? 1 : 0; // 1:开 0：关
-  private boolean isChecked = DEFAULT_IS_CHECKED;
   private int onColor = DEFAULT_ON_COLOR; // 打开颜色
   private int offColor = DEFAULT_OFF_COLOR; // 关闭颜色
   private int btnColor = DEFAULT_BTN_COLOR; // 按钮颜色
@@ -89,12 +88,10 @@ public class SwitchButton extends CompoundButton implements ValueAnimator.Animat
       btnColor = typedArray.getColor(R.styleable.SwitchButton_btnColor, DEFAULT_BTN_COLOR);
       btnStrokeWidth =
           typedArray.getDimension(R.styleable.SwitchButton_btnStrokeWidth, DEFAULT_STROKE_WIDTH);
-      isChecked = typedArray.getBoolean(R.styleable.SwitchButton_checked, DEFAULT_IS_CHECKED);
-      mSwitchValue = isChecked ? 1 : 0;
+      mSwitchValue = isChecked() ? 1 : 0;
       typedArray.recycle();
     }
     setLayerType(LAYER_TYPE_SOFTWARE, null); // 绘制阴影要关闭硬件加速
-    isChecked = mSwitchValue == 1 ? true : false;
   }
 
   public void setOnCheckedChangeListener(OnCheckedChangeListener mOnCheckedChangeListener) {
@@ -103,18 +100,18 @@ public class SwitchButton extends CompoundButton implements ValueAnimator.Animat
 
   private void setSwitchValue(float switchValue) {
     this.mSwitchValue = switchValue;
-    if (mSwitchValue == 1 && !isChecked) {
-      isChecked = true;
+    if (mSwitchValue == 1 && !isChecked()) {
+      super.setChecked(true);
       notifyCheckChanged();
-    } else if (mSwitchValue == 0 && isChecked) {
-      isChecked = false;
+    } else if (mSwitchValue == 0 && isChecked()) {
+      super.setChecked(false);
       notifyCheckChanged();
     }
   }
 
   private void notifyCheckChanged() {
     if (mOnCheckedChangeListener != null) {
-      mOnCheckedChangeListener.onCheckedChanged(this, isChecked);
+      mOnCheckedChangeListener.onCheckedChanged(this, isChecked());
     }
   }
 
@@ -131,9 +128,10 @@ public class SwitchButton extends CompoundButton implements ValueAnimator.Animat
 
 
   public void setChecked(boolean checked, boolean withAnim) {
-    if(isChecked == checked){
+    if(isChecked() == checked){
       return;
     }
+    super.setChecked(checked);
     stopAnimation();
     if (withAnim) {
       startMyAnimation(true);
@@ -141,11 +139,6 @@ public class SwitchButton extends CompoundButton implements ValueAnimator.Animat
       setSwitchValue(checked ? 1 : 0);
       invalidate();
     }
-  }
-
-  @Override
-  public boolean isChecked() {
-    return isChecked;
   }
 
   /**

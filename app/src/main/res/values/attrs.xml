@@ -34,6 +34,5 @@
         <attr name="offColor" format="color" />
         <attr name="btnColor" format="color" />
         <attr name="btnStrokeWidth" format="dimension" />
-        <attr name="checked" format="boolean" />
     </declare-styleable>
 </resources>
