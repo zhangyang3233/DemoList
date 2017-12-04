@@ -97,11 +97,23 @@
                 <category android:name="demo.item"/>
             </intent-filter>
         </activity>
-        <activity android:name=".demo.widget.switchbtn.SwitchBtnActivity"
+        <activity
+            android:name=".demo.widget.switchbtn.SwitchBtnActivity"
             android:label="控件/switchbtn"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="demo.item"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demo.dialog.PPDDialogActivity"
+            android:label="dialog/ppddialog"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="demo.item"/>
             </intent-filter>
         </activity>

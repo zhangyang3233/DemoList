@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ppd_dialog_radius">4dp</dimen>
+    <dimen name="ppd_dialog_margin_top">30dp</dimen>
+    <dimen name="ppd_dialog_margin_left">25dp</dimen>
+    <dimen name="ppd_dialog_margin_right">25dp</dimen>
+    <dimen name="ppd_dialog_margin_bottom">25dp</dimen>
+    <dimen name="ppd_dialog_title_content_gap">20dp</dimen>
+    <dimen name="ppd_btn_height">46dp</dimen>
+</resources>

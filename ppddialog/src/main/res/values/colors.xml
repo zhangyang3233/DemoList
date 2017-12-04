@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ppd_dialog_gray_divider">#cccccc</color>
+    <color name="ppd_dialog_main_color">#0abfff</color>
+    <color name="ppd_dialog_text_black">#333333</color>
+</resources>

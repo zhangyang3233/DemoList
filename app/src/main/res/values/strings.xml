@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">DemoList</string>
     <string name="has_deleted">该功能已经删除</string>
+    <string name="auto_repay_tip">开通自动代扣还款后，您在拍拍贷的所有待还均会在还款日当日从您的银行卡中自动扣除并还款。</string>
+
 </resources>
