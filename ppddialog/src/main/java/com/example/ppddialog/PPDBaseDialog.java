@@ -1,4 +1,3 @@
-
 package com.example.ppddialog;
 
 import android.app.Activity;
@@ -14,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+
 
 public class PPDBaseDialog extends Dialog {
     private static final String TAG = PPDBaseDialog.class.getSimpleName();
@@ -106,6 +106,7 @@ public class PPDBaseDialog extends Dialog {
         this.setMessage(mContext.getResources().getText(res));
     }
 
+    @Override
     public void setContentView(View rootView) {
         super.setContentView(rootView);
         this.mRootView = rootView;
@@ -170,5 +171,7 @@ public class PPDBaseDialog extends Dialog {
         }
         window.setAttributes(p);
     }
+
+
 
 }

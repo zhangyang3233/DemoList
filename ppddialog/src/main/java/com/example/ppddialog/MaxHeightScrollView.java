@@ -1,3 +1,17 @@
+/*
+ * filename:    MaxHeightScrollView.java
+ * Description:
+ * Copyright:   PPD NCB Copyright(c)2017
+ * @author:     zhangyang05
+ * @version:    1.0
+ * Create at:   17-12-6 上午9:49
+ *
+ * Modification History:
+ * Date         Author      Version     Description
+ * ==================================================================
+ * 17-12-6 上午9:49     zhangyang05     1.0       1.0 Version
+ */
+
 package com.example.ppddialog;
 
 import android.annotation.TargetApi;

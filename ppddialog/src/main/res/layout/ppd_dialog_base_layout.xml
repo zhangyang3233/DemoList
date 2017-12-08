@@ -13,8 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="@dimen/ppd_dialog_margin_bottom"
-        android:paddingLeft="@dimen/ppd_dialog_margin_left"
-        android:paddingRight="@dimen/ppd_dialog_margin_right"
         android:paddingTop="@dimen/ppd_dialog_margin_top"
         >
 
@@ -36,20 +34,24 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/ppd_dialog_title_content_gap"
             />
-
-        <com.example.ppddialog.MaxHeightScrollView
-            android:id="@+id/msg_container"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:maxHeight="400dp"
-            tools:visibility="visible">
+            android:layout_height="match_parent"
+            android:id="@+id/msg_container">
+            <com.example.ppddialog.MaxHeightScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:maxHeight="400dp"
+                tools:visibility="visible">
 
-            <include
-                layout="@layout/ppd_message_default_layout"
-                />
+                <include
+                    layout="@layout/ppd_message_default_layout"
+                    />
 
-        </com.example.ppddialog.MaxHeightScrollView>
+            </com.example.ppddialog.MaxHeightScrollView>
+        </LinearLayout>
+
     </LinearLayout>
 
 

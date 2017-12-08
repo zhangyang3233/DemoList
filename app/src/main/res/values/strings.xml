@@ -2,5 +2,6 @@
     <string name="app_name">DemoList</string>
     <string name="has_deleted">该功能已经删除</string>
     <string name="auto_repay_tip">开通自动代扣还款后，您在拍拍贷的所有待还均会在还款日当日从您的银行卡中自动扣除并还款。</string>
+    <string name="tip_adsf">借款人按照经拍拍贷平台撮合借得资金的一定比例向拍拍贷交付款项并由拍拍贷代为保管，作为质保专款。质保专款对标记为“赔”的借款所涉及的出借人进行质保赔付时以质保专款账户的资金总额为限。质保专款用于且仅能用于借款人逾期时对出借人的有限赔付及为出借人利益进行债权追索所发生的合理费用的支付。</string>
 
 </resources>

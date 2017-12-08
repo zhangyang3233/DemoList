@@ -2,14 +2,19 @@ package com.example.zhangyang05.demolist.demo.dialog;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.ppddialog.PPDBaseDialog;
 import com.example.ppddialog.PPDDialogBuilder;
 import com.example.zhangyang05.demolist.R;
 import com.example.zhangyang05.demolist.base.BaseActivityCompat;
+import com.example.zhangyang05.demolist.demo.expandablerecyclerview.MyAdapter;
 
 public class PPDDialogActivity extends BaseActivityCompat implements DialogInterface.OnClickListener {
     CheckBox checkbox_custom;
@@ -33,10 +38,38 @@ public class PPDDialogActivity extends BaseActivityCompat implements DialogInter
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                show();
+                show3();
             }
         });
     }
+
+
+    private void show1() {
+        PPDDialogBuilder builder = new PPDDialogBuilder(this);
+        builder.setTitle("质保转款").setMessage(R.string.tip_adsf).setPositive("我知道了", null);
+        builder.create().show();
+    }
+
+    private void show2() {
+        PPDDialogBuilder builder = new PPDDialogBuilder(this);
+        builder.setTitle("服务费").setMessage("拍拍贷为借款人提供服务，向借款人收取的费用。").setPositive("我知道了", null);
+        builder.create().show();
+    }
+
+    private void show3() {
+        PPDDialogBuilder builder = new PPDDialogBuilder(this);
+        builder.setTitle("还款计划").setCustomMessageLayoutRes(R.layout.recyclerview_layout).setPositive("确认", null);
+        PPDBaseDialog dialog = builder.create();
+        View root = dialog.getRootView();
+        LinearLayout container = root.findViewById(R.id.content_container);
+        container.setPadding(container.getPaddingLeft(), container.getPaddingTop(), container.getPaddingRight(),0);
+        RecyclerView recyclerView =  root.findViewById(R.id.mRecyclerView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(new MyAdapter());
+        dialog.show();
+    }
+
 
     private void show() {
         PPDDialogBuilder builder = new PPDDialogBuilder(this);
@@ -55,7 +88,8 @@ public class PPDDialogActivity extends BaseActivityCompat implements DialogInter
                 builder.setMessageColor(0xff00ffff);
                 builder.setMessageSize(10);
             } else {
-                builder.setCustomMessageLayoutRes(R.layout.dialog_common_auto_repay);
+//                builder.setCustomMessageLayoutRes(R.layout.dialog_common_auto_repay);
+                builder.setMessage("asdjhfakjhdsfkahdsflkjahdsflkjahdsflkjhadlfjhaldskjfhalkjdsfhalkjdshfakjhdsfkajhdsfakjhdsflkajhdsfkjahsdf");
             }
         }
         if (checkBox_btn1.isChecked()) {
