@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.zhangyang05.demolist">
+    package="com.example.zhangyang05.demolist">
 
     <application
         android:name=".base.BaseApplication"
@@ -12,9 +12,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -22,9 +22,9 @@
             android:label="系统效果/揭示动画"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -32,9 +32,9 @@
             android:label="控件/定制进度条"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -42,9 +42,9 @@
             android:label="dialog/底部弹出dialog"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -52,9 +52,9 @@
             android:label="系统效果/按钮ripple背景"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -62,9 +62,9 @@
             android:label="控件/刮刮卡效果"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -72,9 +72,9 @@
             android:label="系统效果/约束布局"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -82,9 +82,9 @@
             android:label="系统效果/NestedScrolling"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -92,9 +92,9 @@
             android:label="控件/looperViewpager"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -102,9 +102,9 @@
             android:label="控件/switchbtn"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
         <activity
@@ -112,17 +112,28 @@
             android:label="dialog/ppddialog"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="demo.item"/>
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
-        <activity android:name=".demo.expandablerecyclerview.ExpandableRecyclerviewActivity"
-                  android:label="控件/Expandable RecyclerView"
-                  android:theme="@style/AppTheme">
+        <activity
+            android:name=".demo.expandablerecyclerview.ExpandableRecyclerviewActivity"
+            android:label="控件/Expandable RecyclerView"
+            android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="demo.item"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="demo.item" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".demo.widget.autoResizeTextView.AutoResizeActivity"
+            android:label="控件/自适应TextView"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="demo.item" />
             </intent-filter>
         </activity>
     </application>
